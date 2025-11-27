@@ -1,0 +1,255 @@
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #3a6f9b;
+    --success-color: #2ecc71;
+    --info-color: #3498db;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --accent-color: #e67e22;
+}
+
+/* Global Reset */
+*{
+    box-sizing: border-box;
+    font-family: "Stick No Bills", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+/* Correct class name */
+.navbar.scrolled{
+    background-color: rgba(44,62,80,0.8);
+    padding: 10px 0;
+}
+
+.nav-link{
+    color: rgba(255,255,255,0.8);
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover{
+    color: #fff;
+}
+
+.nav-link::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+/* Dropdown */
+.dropdown-item{
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* ==========================
+   BANNER
+========================== */
+
+.banners{
+    height: 100vh;
+    min-height: 100vh;
+    background: linear-gradient(135deg,var(--primary-color),var(--secondary-color));
+    position: relative;
+}
+
+.banner-contents{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-contents h1{
+    font-size: 3.5rem;
+}
+
+.banner-contents h2{
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.banner-contents p{
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+.btn-warning{
+    background-color: var(--accent-color);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.btn-warning:hover{
+    background-color: #f39c12;
+    box-shadow: 0 7px 20px rgba(188,161,11,0.5);
+    transform: rotate(-3deg);
+}
+
+/* ==========================
+   SECTION TITLES
+========================== */
+
+section{
+    padding: 80px 0;
+}
+
+.sectiontitles h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.sectiontitles h2::after{
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.sectiontitles p{
+    color: #777;
+    margin-top: 10px;
+}
+
+/* ==========================
+   CARD STYLES
+========================== */
+
+.card{
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* ==========================
+   TEAM
+========================== */
+
+.teamcards .card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.teamcards .socialicons a{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    background: #f5f5f5;
+    color: #555;
+    border-radius: 50%;
+}
+
+.teamcards .socialicons a:hover{
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.progress{
+    height: 10px;
+}
+
+.progress-bar{
+    border-radius: 5px;
+}
+
+/* ==========================
+   ANIMATION FIX
+========================== */
+
+@keyframes fadeup{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animates{
+    animation: fadeup 0.8s ease forwards;
+}
+
+.delayones{ animation-delay: 0.2s; }
+.delaytwos{ animation-delay: 0.4s; }
+.delaythrees{ animation-delay: 0.6s; }
+
+/* ==========================
+   RESPONSIVE FIXES
+========================== */
+
+@media(max-width:576px){
+    .banner-contents h1{ font-size: 1.8rem; }
+    .banner-contents h2{ font-size: 1.4rem; }
+    .banner-contents .btn{ width: 100%; }
+}
+
+@media(max-width:768px){
+    .banners{
+        height: auto;
+        padding: 120px 0 80px;
+    }
+}

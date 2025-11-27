@@ -1,0 +1,44 @@
+//class
+navbar 
+navbar-nav
+navbar-dark => nav background color
+nav-item nav-link
+navbar-toggler =>မျဉ်းကြောင်းပျောက်
+fixed-top => scrolled ဆွဲရင် nav bar ကမရွေ့
+navber-brand =>nav logo brand name 
+d-grid/w-100 =>button အပြည့်ပေး
+fade =>အပေါ်ကနေ ဆင်းလာတာ
+
+// modal group
+Modal box =>sm lg 
+//modal header
+//modal body
+//modal footer
+modal size => 
+(i)Standard size
+modal-xl , modal-lg , modal-sm
+(ii)Full size
+modal-fullscreen-xxl-down , modal-fullscreen-xl-down  , modal-fullscreen-lg-down ,modal-fullscreen-md-down,modal-fullscreen-sm-down 
+
+scroll modal
+/modal-dialog-scrollable
+
+1/ href="#loginmodal" data-bs-toggle="modal"
+2/modal-dialog ==> modal size,modal area အတွက်
+  modal-content ==> modal background 
+  id="loginmodal" class="modal fade"
+
+//card group
+card
+card-header
+card-body
+card-footer
+card-link
+
+
+//data-bs-t
+data-bs-toggle="dropdown"
+
+h1 to h6
+display-1 to display-6
+
